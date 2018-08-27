@@ -455,9 +455,9 @@ function doMagic8BallVoodoo() {
 }
 
 // Later in the code:
-if(input == (prefix + "8ball") === 0)
+if(message.content.indexOf(prefix + '8ball') === 0)
 {
-    bot.reply(  doMagic8BallVoodoo());
+    bot.reply( doMagic8BallVoodoo());
 }
 
 
