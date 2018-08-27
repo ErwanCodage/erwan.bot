@@ -217,13 +217,11 @@ if(message.author.id === config.ownerID){
 
 
 
-let user;
+
 	// If the user mentions someone, display their stats. If they just run userinfo without mentions, it will show their own stats.
-    if (message.mentions.users.first()) {
-      user = message.mentions.users.first();
-    } else {
-        user = message.author;
-    }
+    
+       var user = message.author;
+    
 
 
 if (message.content === '--donator?') {
