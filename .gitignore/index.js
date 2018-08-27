@@ -447,7 +447,7 @@ message.channel.send({embed: {
 
 
 
-
+/*
 function doMagic8BallVoodoo() {
     var rand = ['Yes', 'No', 'Why are you even trying?', 'What do you think? NO', 'Maybe', 'Never', 'Yep'];
 
@@ -455,12 +455,23 @@ function doMagic8BallVoodoo() {
 }
 
 // Later in the code:
-if(message.content.indexOf(prefix + '8ball') === 0)
-{
-    bot.reply( doMagic8BallVoodoo());
+if(message.content.indexOf(prefix + '8ball') === 0){
+
+    bot.reply('.' + doMagic8BallVoodoo());
 }
 
+*/
+function doMagic8BallVoodoo() {
+    var rand = ['Yes', 'No', 'Why are you even trying?', 'What do you think? NO', 'Maybe', 'Never', 'Yep'];
 
+    return rand[Math.floor(Math.random()*rand.length)];
+}
+
+// Later in the code:
+if(input == "--8BALL")
+{
+    bot.reply(message, 'Your anwser is: ' + doMagic8BallVoodoo());
+}
 
 
 
