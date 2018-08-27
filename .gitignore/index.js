@@ -91,7 +91,6 @@ var sender = message.author;
  
      }
  } else
-
 if (message.content.indexOf(prefix + 'topdé') === 0) {
  
  var sortable = [];
@@ -99,11 +98,9 @@ if (message.content.indexOf(prefix + 'topdé') === 0) {
    var pts = points['dé'][user].score;
    sortable.push([ user , pts]);
  }
-
  sortable.sort(function(b, a) {
    return a[1] - b[1];
  });
-
  
  var nombreDeJoueurAfficher = 0;
  var nombreDeJoueurAfficherMaximum = 10
@@ -119,10 +116,8 @@ if (message.content.indexOf(prefix + 'topdé') === 0) {
  }
  
  message.channel.send( classementTexte.replace('_', '\\_') )
-
 }
     
-
 console.log(JSON.stringify(points))
 	
 	/*
@@ -131,7 +126,6 @@ fs.writeFileSync('./points.json', JSON.stringify(points), (err) => {
  // if (err) 
 	  console.error(err);
 });
-
 gist.create({
    public: true,
    description: 'My first gist',
@@ -144,11 +138,7 @@ gist.create({
      var gistJson = httpResponse.data;
   console.log(gistJson);
 })
-
-
   fs.writeFile("./points.json", JSON.stringify(points), (err) => console.error);
-
-
 */
 
 
@@ -237,16 +227,7 @@ let user;
 
 
 if (message.content === '--donator?') {
-	var didIsDonator = false,
-	for (var IsID; config.donatorID)
-{
-	if(message.author.id === IsID)
-	{
-		didIsDonator = true,
-	}
-		
-} 
-if(didIsDonator === true){
+if(message.author.id === config.donatorID){
   message.channel.send({embed:{
 	title:"Donateur ?",
 	description:":white_check_mark:",
@@ -516,4 +497,3 @@ client.on("guildDelete", guild => {
   console.log(`GuildDelete`);
    client.channels.get('479011053494337538').send(`**Une guilde a enlever mon bot** \n  Nom : ${guild.name}.`);
 });
-
