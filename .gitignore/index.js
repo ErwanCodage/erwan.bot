@@ -39,7 +39,7 @@ let cmd = messageArray[0];
 //let args = messageArray.slice(1);
 var sender = message.author;
 
-/*
+
  if (message.content.indexOf(prefix + 'dé') === 0) {
    
  let cdseconds = 5;	
