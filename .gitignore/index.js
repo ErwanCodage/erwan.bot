@@ -120,7 +120,7 @@ if (message.content.indexOf(prefix + 'topdé') === 0) {
     
 console.log(JSON.stringify(points))
 	
-	/*
+	
 	console.log(fs.existsSync('./points.json'))
 fs.writeFileSync('./points.json', JSON.stringify(points), (err) => {
  // if (err) 
@@ -139,7 +139,7 @@ gist.create({
   console.log(gistJson);
 })
   fs.writeFile("./points.json", JSON.stringify(points), (err) => console.error);
-*/
+
 
 
 
